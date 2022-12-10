@@ -3,28 +3,23 @@
   margin: 0;
   padding: 0;
 }
-li,
-a {
-  font-family: "Roboto Slab", serif;
-
-  font-weight: 600;
-  font-size: 30px;
-  color: rgba(26, 24, 24, 0.315);
-  text-decoration: none;
+body {
+  background-image: url(/slike/flowers.jpg);
+  background-size: 100%;
+  overflow: hidden;
 }
 nav {
+  padding: 2% 0;
+}
+nav ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 20%;
+  justify-content: center;
+  gap: 10%;
 }
 .nav__links {
   list-style: none;
 }
-.nav__links li {
-  display: inline-block;
-  padding: 0px 80px;
-}
+
 .nav__links li a {
   transition: all 0.3s ease 0s;
 }
@@ -32,18 +27,23 @@ nav {
   color: darkslateblue;
 }
 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgba(26, 24, 24, 0.315);
+  text-decoration: none;
   background-color: rgb(163, 128, 180);
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;
 }
 .img-okano {
   position: absolute;
-  object-fit: fill;
-  width: 90%;
-  height: 80%;
-  top: 55%;
+  width: 85rem;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-body {
-  background-image: url(/slike/flowers.jpg);
-  background-size: 100%;
 }
