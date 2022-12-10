@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #e8e4d9;
 }
 li,
 a {
@@ -37,12 +36,14 @@ a {
 }
 .img-okano {
   position: absolute;
-  /* height: 100px; */
-  width: 1200px;
-  top: 65%;
+  object-fit: fill;
+  width: 90%;
+  height: 80%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 body {
-  background-image: url(slike/flowers.jpg);
+  background-image: url(/slike/flowers.jpg);
+  background-size: 100%;
 }
