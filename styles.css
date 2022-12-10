@@ -13,7 +13,7 @@ a {
   color: rgba(26, 24, 24, 0.315);
   text-decoration: none;
 }
-header {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,5 +33,11 @@ header {
   color: darkslateblue;
 }
 a {
-  background-color: darkorchid;
+  background-color: rgb(163, 128, 180);
+}
+.img-okano {
+  display: absoulte;
+  size: 100px 100px;
+  height: 100 px;
+  width: 100 px;
 }
