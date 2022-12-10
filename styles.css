@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 30px 20%;
 }
 .nav__links {
   list-style: none;
@@ -36,8 +36,13 @@ a {
   background-color: rgb(163, 128, 180);
 }
 .img-okano {
-  display: absoulte;
-  size: 100px 100px;
-  height: 100 px;
-  width: 100 px;
+  position: absolute;
+  /* height: 100px; */
+  width: 1200px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body {
+  background-image: url(slike/flowers.jpg);
 }
