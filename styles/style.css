@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto Slab", serif;
 }
 body {
   background-image: url(/slike/flowers.jpg);
   background-size: 100%;
   overflow: hidden;
+  /* hidden da ne bi mogao da skrolujes dole */
 }
 nav {
   padding: 2% 0;
@@ -30,20 +32,104 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto Slab", serif;
+
   font-weight: 600;
   font-size: 2rem;
-  color: rgba(26, 24, 24, 0.315);
+  color: rgba(19, 18, 18, 0.315);
   text-decoration: none;
   background-color: rgb(163, 128, 180);
   height: 3rem;
   width: 10rem;
-  border-radius: 10px;
+  border-radius: 1.1rem;
+  /* treba u px border radius,padding margine procenti itd, remove za fontove itd */
 }
 .img-okano {
   position: absolute;
   width: 85rem;
+  /* rade top i left zbog positiona, a transform radi svakako */
   top: 70%;
   left: 50%;
+  /* ima i scale umesto translate, po difoltu je 1 .. da nijeposition absoulte justify content center i align items bi bilo je za y kad je flex*/
   transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  /* decko resio */
+}
+.todo {
+  padding: 1% 20%;
+  display: flex;
+  justify-content: center;
+  color: rgb(163, 128, 180);
+  /* pointer-events: none; */
+  /* user-select: none; */
+}
+.task-list {
+  padding: 3% 20%;
+  display: flex;
+  justify-content: center;
+  color: rgb(163, 128, 180);
+
+  font-family: "Roboto Slab", serif;
+}
+
+#new-task-form {
+  display: flex;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+}
+#new-task-input {
+  flex: 1 1 0%;
+
+  background-color: rgb(163, 128, 180);
+  border-radius: 1rem;
+  margin-right: 1 rem;
+  font-size: 1.25 rem;
+}
+#new-task-input::placeholder {
+  color: rgb(7, 4, 10);
+}
+#new-task-submit {
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 1.125rem;
+}
+#new-task-submit:hover {
+  opacity: 0.8;
+  color: rgb(7, 2, 10);
+}
+#new-task-submit:active {
+  opacity: 0.6;
+}
+#zadaci .zadatak {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(163, 128, 180);
+  border-radius: 1rem;
+}
+#zadaci {
+  padding: 0.5%;
+}
+.zadatak .akcije button {
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 1.125rem;
+}
+.zadatak .akcije button:hover {
+  opacity: 0.8;
+  color: rgb(7, 2, 10);
+}
+.zadatak .akcije button:active {
+  opacity: 0.6;
+}
+.zadatak .akcije .edit {
+  color: rgb(75, 6, 165);
+}
+.zadatak .akcije .delete {
+  color: rgb(255, 3, 3);
 }
