@@ -58,7 +58,7 @@ a {
 .todo {
   padding: 1% 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   color: rgb(163, 128, 180);
   /* pointer-events: none; */
   /* user-select: none; */
@@ -108,7 +108,7 @@ button {
 }
 #zadaci .zadatak {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   /* background-color: rgb(163, 128, 180); */
   background-color: rgb(185, 173, 196);
   border-radius: 1rem;
