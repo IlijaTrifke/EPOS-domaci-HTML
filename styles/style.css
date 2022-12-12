@@ -77,6 +77,7 @@ main {
 }
 .todo h1 {
   text-align: center;
+  user-select: none;
 }
 .task-list {
   /* padding: 3% 20%; */
@@ -90,6 +91,7 @@ main {
 .task-list h1 {
   align-self: flex-start;
   font-size: 2rem;
+  user-select: none;
 }
 
 input,
