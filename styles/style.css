@@ -109,8 +109,12 @@ button {
 #zadaci .zadatak {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(163, 128, 180);
+  /* background-color: rgb(163, 128, 180); */
+  background-color: rgb(185, 173, 196);
   border-radius: 1rem;
+}
+#zadaci .zadatak .sadrzaj {
+  flex: 1 1 0%;
 }
 #zadaci {
   padding: 0.5%;
