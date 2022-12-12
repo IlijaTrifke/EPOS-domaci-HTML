@@ -46,9 +46,8 @@ a {
 .img-okano {
   position: absolute;
   width: 65rem;
-
   /* rade top i left zbog positiona, a transform radi svakako */
-  top: 60%;
+  top: 68%;
   left: 50%;
   /* ima i scale umesto translate, po difoltu je 1 .. da nijeposition absoulte justify content center i align items bi bilo je za y kad je flex*/
   transform: translate(-50%, -50%);
@@ -60,17 +59,12 @@ a {
 main {
   position: relative;
   padding: 5% 10%;
-  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 }
 .todo {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   color: rgb(163, 128, 180);
   /* pointer-events: none; */
   /* user-select: none; */
@@ -80,16 +74,12 @@ main {
   user-select: none;
 }
 .task-list {
-  /* padding: 3% 20%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(163, 128, 180);
   font-family: "Roboto Slab", serif;
 }
 
 .task-list h1 {
-  align-self: flex-start;
+  text-align: center;
   font-size: 2rem;
   user-select: none;
 }
@@ -102,10 +92,9 @@ button {
   outline: none;
 }
 #new-task-form {
+  margin-top: 2%;
   display: flex;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
+  gap: 1rem;
 }
 
 #new-task-input {
@@ -134,6 +123,7 @@ button {
 
 #zadaci {
   width: 27rem;
+  height: 20rem;
 }
 #zadaci .zadatak {
   display: flex;
@@ -177,7 +167,7 @@ button {
 .zadatak .akcije button:hover {
   opacity: 0.8;
   color: rgb(7, 2, 10);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .zadatak .akcije button:active {
   opacity: 0.6;
