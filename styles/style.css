@@ -45,9 +45,10 @@ a {
 }
 .img-okano {
   position: absolute;
-  width: 85rem;
+  width: 65rem;
+
   /* rade top i left zbog positiona, a transform radi svakako */
-  top: 70%;
+  top: 60%;
   left: 50%;
   /* ima i scale umesto translate, po difoltu je 1 .. da nijeposition absoulte justify content center i align items bi bilo je za y kad je flex*/
   transform: translate(-50%, -50%);
@@ -57,10 +58,12 @@ a {
 }
 
 main {
+  position: relative;
   padding: 5% 10%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 }
