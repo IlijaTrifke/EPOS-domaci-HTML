@@ -20,42 +20,26 @@
         <li><a href="#">Kontakt</a></li>
       </ul>
     </nav>
-
     <img class="img-okano" src="slike/monitor.svg" alt="" />
-    <div class="todo">
-      <h1>TO DO List</h1>
-      <form id="new-task-form">
-        <input
-          type="text"
-          id="new-task-input"
-          placeholder="Šta planirate danas?"
-        />
-        <input type="submit" id="new-task-submit" value="Dodaj" />
-      </form>
-    </div>
-
     <main>
-      <section class="task-list">
+      <div class="todo">
+        <h1>TO DO List</h1>
+        <form id="new-task-form">
+          <input
+            type="text"
+            id="new-task-input"
+            placeholder="Šta planirate danas?"
+          />
+          <input type="submit" id="new-task-submit" value="Dodaj" />
+        </form>
+      </div>
+      <div class="task-list">
         <h1>Zadaci</h1>
         <div id="zadaci">
-          <div class="zadatak">
-            <!-- <div class="sadrzaj">
-              <input
-                type="text"
-                class="text"
-                value="Moj divni zadatak"
-                readonly
-              /> -->
-            </div>
-<!-- 
-            <div class="akcije">
-              <button class="edit">Uredi</button>
-              <button class="delete">Obriši</button>
-            </div> -->
-          </div>
+          <div class="zadatak"></div>
         </div>
-      </section>
+      </div>
     </main>
-    <script src="main.js"></script>
+    <script src="/script/main.js"></script>
   </body>
 </html>

@@ -55,26 +55,40 @@ a {
   pointer-events: none;
   /* decko resio */
 }
-.todo {
-  padding: 1% 20%;
+
+main {
+  padding: 5% 10%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   color: rgb(163, 128, 180);
   /* pointer-events: none; */
   /* user-select: none; */
 }
+.todo h1 {
+  text-align: center;
+}
 .task-list {
-  padding: 3% 20%;
+  /* padding: 3% 20%; */
   display: flex;
   justify-content: center;
+  align-items: center;
   color: rgb(163, 128, 180);
-
   font-family: "Roboto Slab", serif;
 }
 
-#new-task-form {
-  display: flex;
+.task-list h1 {
+  align-self: flex-start;
+  font-size: 2rem;
 }
+
 input,
 button {
   appearance: none;
@@ -82,13 +96,18 @@ button {
   background: none;
   outline: none;
 }
-#new-task-input {
-  flex: 1 1 0%;
+#new-task-form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
 
+#new-task-input {
   background-color: rgb(163, 128, 180);
   border-radius: 1rem;
-  margin-right: 1 rem;
-  font-size: 1.25 rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 #new-task-input::placeholder {
   color: rgb(7, 4, 10);
@@ -96,37 +115,64 @@ button {
 #new-task-submit {
   color: var(--black);
   cursor: pointer;
-  transition: 0.4s;
-  font-size: 1.125rem;
+  transition: 0.1s;
+  font-size: 2rem;
 }
 #new-task-submit:hover {
   opacity: 0.8;
   color: rgb(7, 2, 10);
+  transform: scale(1.1);
 }
 #new-task-submit:active {
-  opacity: 0.6;
+  opacity: 0.3;
+}
+
+#zadaci {
+  width: 27rem;
 }
 #zadaci .zadatak {
   display: flex;
-  justify-content: center;
-  /* background-color: rgb(163, 128, 180); */
   background-color: rgb(185, 173, 196);
   border-radius: 1rem;
+  animation-name: animTask;
+  animation-duration: 0.4s;
 }
-#zadaci .zadatak .sadrzaj {
-  flex: 1 1 0%;
+
+@keyframes animTask {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-#zadaci {
-  padding: 0.5%;
+
+.sadrzaj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sadrzaj .text {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.zadatak .akcije {
+  display: flex;
+  gap: 1rem;
 }
 .zadatak .akcije button {
   cursor: pointer;
-  transition: 0.4s;
-  font-size: 1.125rem;
+  transition: 0.1s;
+  font-size: 1.5rem;
 }
 .zadatak .akcije button:hover {
   opacity: 0.8;
   color: rgb(7, 2, 10);
+  transform: scale(1.1);
 }
 .zadatak .akcije button:active {
   opacity: 0.6;
