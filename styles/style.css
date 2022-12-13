@@ -178,3 +178,17 @@ button {
 .zadatak .akcije .delete {
   color: rgb(255, 3, 3);
 }
+
+@media (max-width: 750px) {
+  nav {
+    visibility: hidden;
+  }
+}
+@media (max-width: 1050px) {
+  .img-okano {
+    width: 40rem;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
