@@ -10,10 +10,10 @@ body {
   overflow: hidden;
   /* hidden da ne bi mogao da skrolujes dole */
 }
-.nav {
+nav {
   padding: 2% 0;
 }
-.nav ul {
+nav ul {
   display: flex;
   justify-content: center;
   gap: 10%;
@@ -198,9 +198,6 @@ button {
   .hamburger {
     display: block;
   }
-  .nav {
-    visibility: hidden;
-  }
   .img-okano {
     width: 40rem;
     top: 45%;
@@ -234,8 +231,8 @@ button {
     left: 0;
   }
 }
-@media (max-width: 950px) {
-  .nav {
-    display: none;
+@media (max-width: 750px) {
+  nav {
+    visibility: hidden;
   }
 }
