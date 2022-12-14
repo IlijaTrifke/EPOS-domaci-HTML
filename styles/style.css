@@ -179,12 +179,59 @@ button {
   color: rgb(255, 3, 3);
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(5, 5, 5);
+}
+
 @media (max-width: 1050px) {
+  .hamburger {
+    display: block;
+  }
+  .nav {
+    visibility: hidden;
+  }
   .img-okano {
     width: 40rem;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .hamburger .active .bar :nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger .active .bar :nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger .active .bar :nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav__links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav__links li {
+    margin: 16px 0;
+  }
+  .nav__links.active {
+    left: 0;
   }
 }
 @media (max-width: 950px) {
