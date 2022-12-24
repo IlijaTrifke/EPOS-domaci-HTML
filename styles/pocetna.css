@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+.nav-main {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.ram {
+  position: absolute;
+  object-fit: cover;
+  width: 70%;
+  left: 15%;
+  transform: translateY(-6%) rotateZ(45deg);
+  z-index: -1;
+}
+
+body {
+  background-color: #e0e0d2;
+}
+
+nav {
+  padding: 2% 0;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover {
+  color: darkslateblue;
+}
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgba(19, 18, 18, 0.315);
+  text-decoration: none;
+  background-color: rgb(163, 128, 180);
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1.1rem;
+  user-select: none;
+}

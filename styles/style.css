@@ -41,6 +41,7 @@ a {
   height: 3rem;
   width: 10rem;
   border-radius: 1.1rem;
+  user-select: none;
   /* treba u px border radius,padding margine procenti itd, remove za fontove itd */
 }
 .img-okano {
