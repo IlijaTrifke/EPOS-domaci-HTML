@@ -82,9 +82,20 @@ a {
 .heading {
   font-size: 10rem;
   color: rgb(163, 128, 180);
+  padding-top: 5%;
 }
 .heading .org {
   color: #4d0028;
+}
+.heading .i {
+  position: relative;
+}
+
+.diamond {
+  position: absolute;
+  top: -20%;
+  left: -30%;
+  width: 5rem;
 }
 
 @media (max-width: 1050px) {
