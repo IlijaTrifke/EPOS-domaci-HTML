@@ -232,8 +232,3 @@ button {
     left: 0;
   }
 }
-@media (max-width: 750px) {
-  nav {
-    visibility: hidden;
-  }
-}
