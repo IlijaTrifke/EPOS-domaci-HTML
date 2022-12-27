@@ -11,7 +11,7 @@ body {
   /* hidden da ne bi mogao da skrolujes dole */
 }
 nav {
-  padding: 2% 0;
+  padding: 2rem 0;
 }
 nav ul {
   display: flex;
