@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Organizer</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizer | Početna</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,41 +14,46 @@
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
-    <nav>
-      <ul class="nav__links">
-        <li><a href="pocetna.html" class="nav_linkss">Početna</a></li>
-        <li><a href="#" class="nav_linkss">FAQ</a></li>
-        <li><a href="index.html" class="nav_linkss">TO DO</a></li>
-        <li><a href="kontakt.html" class="nav_linkss">Kontakt</a></li>
-      </ul>
+    <div class="hero">
+      <img class="ram" src="/slike/35151-1-square-frame-image.png" alt="Ram" />
+      <div class="nav-main">
+        <nav>
+          <ul class="nav__links">
+            <li><a href="index.html" class="nav_linkss">Početna</a></li>
+            <li><a href="faq.html" class="nav_linkss">FAQ</a></li>
+            <li><a href="todo.html" class="nav_linkss">TO DO</a></li>
+            <li><a href="kontakt.html" class="nav_linkss">Kontakt</a></li>
+          </ul>
 
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-
-    <main>
-      <img class="img-okano" src="slike/monitor.svg" alt="Slika monitora" />
-      <div class="todo">
-        <h1>TO DO List</h1>
-        <form id="new-task-form">
-          <input
-            type="text"
-            id="new-task-input"
-            placeholder="Šta planirate danas?"
-          />
-          <input type="submit" id="new-task-submit" value="Dodaj" />
-        </form>
-      </div>
-      <div class="task-list">
-        <h1>Zadaci</h1>
-        <div id="zadaci">
-          <div class="zadatak"></div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+        <div class="main">
+          <div class="heading-container">
+            <h1 class="heading">
+              <span class="org">ORG</span>AN<span class="i"
+                >I<img class="diamond" src="/slike/dijamant.png" alt="" /></span
+              >ZER
+            </h1>
+            <h1 class="slogan">YOU DO YOU</h1>
+          </div>
         </div>
       </div>
-    </main>
+      <div class="footer">
+        <div class="decko">
+          <h1>Kreiraj budžet & kreiraj listu</h1>
+          <img src="/slike/anime-3773977_1920.png" alt="Decko" />
+        </div>
+        <div class="devojka">
+          <h1>Organizuj & pokreni sebe kroz našu malu fioku</h1>
+          <img src="/slike/woman-6274880_1920.png" alt="Devojka" />
+        </div>
+      </div>
+    </div>
+
     <script src="/script/index.js"></script>
   </body>
 </html>

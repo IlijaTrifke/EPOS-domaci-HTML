@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Organizer</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/todo.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav_linkss">Početna</a></li>
+        <li><a href="faq.html" class="nav_linkss">FAQ</a></li>
+        <li><a href="todo.html" class="nav_linkss">TO DO</a></li>
+        <li><a href="kontakt.html" class="nav_linkss">Kontakt</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <main>
+      <img class="img-okano" src="slike/monitor.svg" alt="Slika monitora" />
+      <div class="todo">
+        <h1>TO DO List</h1>
+        <form id="new-task-form">
+          <input
+            type="text"
+            id="new-task-input"
+            placeholder="Šta planirate danas?"
+          />
+          <input type="submit" id="new-task-submit" value="Dodaj" />
+        </form>
+      </div>
+      <div class="task-list">
+        <h1>Zadaci</h1>
+        <div id="zadaci">
+          <div class="zadatak"></div>
+        </div>
+      </div>
+    </main>
+    <script src="/script/todo.js"></script>
+  </body>
+</html>

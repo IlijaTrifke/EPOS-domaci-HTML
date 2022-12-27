@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+}
+body {
+  background-image: url(/slike/flowers.jpg);
+  background-size: 100%;
+  overflow: hidden;
+  /* hidden da ne bi mogao da skrolujes dole */
+}
+nav {
+  padding: 2rem 0;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover {
+  color: darkslateblue;
+}
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgba(19, 18, 18, 0.315);
+  text-decoration: none;
+  background-color: rgb(163, 128, 180);
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1.1rem;
+  user-select: none;
+  /* treba u px border radius,padding margine procenti itd, remove za fontove itd */
+}
+.img-okano {
+  position: absolute;
+  width: 65rem;
+  /* rade top i left zbog positiona, a transform radi svakako */
+  top: 68%;
+  left: 50%;
+  /* ima i scale umesto translate, po difoltu je 1 .. da nijeposition absoulte justify content center i align items bi bilo je za y kad je flex*/
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  /* decko resio */
+}
+
+main {
+  position: relative;
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.todo {
+  color: rgb(163, 128, 180);
+  /* pointer-events: none; */
+  /* user-select: none; */
+}
+.todo h1 {
+  text-align: center;
+  user-select: none;
+}
+.task-list {
+  color: rgb(163, 128, 180);
+  font-family: "Roboto Slab", serif;
+}
+
+.task-list h1 {
+  text-align: center;
+  font-size: 2rem;
+  user-select: none;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+}
+#new-task-form {
+  margin-top: 2%;
+  display: flex;
+  gap: 1rem;
+}
+
+#new-task-input {
+  background-color: rgb(163, 128, 180);
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#new-task-input::placeholder {
+  color: rgb(7, 4, 10);
+}
+#new-task-submit {
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 2rem;
+}
+#new-task-submit:hover {
+  opacity: 0.8;
+  color: rgb(7, 2, 10);
+  transform: scale(1.1);
+}
+#new-task-submit:active {
+  opacity: 0.3;
+}
+
+#zadaci {
+  width: 27rem;
+  height: 20rem;
+}
+#zadaci .zadatak {
+  display: flex;
+  background-color: rgb(185, 173, 196);
+  border-radius: 1rem;
+  animation-name: animTask;
+  animation-duration: 0.4s;
+}
+
+@keyframes animTask {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sadrzaj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sadrzaj .text {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.zadatak .akcije {
+  display: flex;
+  gap: 1rem;
+}
+.zadatak .akcije button {
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 1.5rem;
+}
+.zadatak .akcije button:hover {
+  opacity: 0.8;
+  color: rgb(7, 2, 10);
+  transform: scale(1.2);
+}
+.zadatak .akcije button:active {
+  opacity: 0.6;
+}
+.zadatak .akcije .edit {
+  color: rgb(75, 6, 165);
+}
+.zadatak .akcije .delete {
+  color: rgb(255, 3, 3);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(5, 5, 5);
+}
+
+@media (max-width: 1050px) {
+  .hamburger {
+    display: block;
+  }
+  .img-okano {
+    width: 40rem;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hamburger .active .bar :nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger .active .bar :nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger .active .bar :nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav__links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav__links li {
+    margin: 16px 0;
+  }
+  .nav__links.active {
+    left: 0;
+  }
+}
