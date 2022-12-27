@@ -177,3 +177,23 @@ a {
     left: 0;
   }
 }
+@media (max-width: 930px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .ram,
+  .diamond {
+    display: none;
+  }
+  .decko img {
+    width: 10rem;
+  }
+  .devojka img {
+    width: 10rem;
+  }
+  .devojka h1,
+  .decko h1 {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

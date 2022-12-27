@@ -5,10 +5,11 @@
   font-family: "Roboto Slab", serif;
 }
 body {
-  background-image: url(/slike/flowers.jpg);
+  background-image: url(/img/flowers.jpg);
   background-size: 100%;
   overflow: hidden;
-  /* hidden da ne bi mogao da skrolujes dole */
+  position: relative;
+  z-index: -2;
 }
 nav {
   padding: 2rem 0;
@@ -64,6 +65,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  z-index: -1;
 }
 .todo {
   color: rgb(163, 128, 180);
@@ -132,6 +134,7 @@ button {
   border-radius: 1rem;
   animation-name: animTask;
   animation-duration: 0.4s;
+  justify-content: space-between;
 }
 
 @keyframes animTask {
@@ -224,11 +227,35 @@ button {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    z-index: 1;
   }
   .nav__links li {
     margin: 16px 0;
   }
   .nav__links.active {
     left: 0;
+  }
+}
+@media (max-width: 650px) {
+  .img-okano {
+    display: none;
+  }
+  #new-task-input {
+    font-size: 1.1rem;
+  }
+  .sadrzaj .text {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+  .zadatak .akcije button {
+    font-size: 1rem;
+  }
+  #new-task-submit {
+    font-size: 1rem;
+  }
+
+  #zadaci .zadatak {
+    width: 70%;
+    margin: auto;
   }
 }

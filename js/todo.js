@@ -4,12 +4,12 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   nav__links.classList.toggle("active");
 });
-document.querySelectorAll(".nav_linkss").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    nav__links.classList.remove("active");
-  })
-);
+// document.querySelectorAll(".nav_linkss").forEach((n) =>
+//   n.addEventListener("click", () => {
+//     hamburger.classList.remove("active");
+//     nav__links.classList.remove("active");
+//   })
+// );
 
 const form = document.querySelector("#new-task-form");
 const input = document.querySelector("#new-task-input");

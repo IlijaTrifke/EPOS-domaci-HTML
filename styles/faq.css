@@ -5,10 +5,62 @@
   font-family: "Roboto Slab", serif;
 }
 
-.faq-heading {
-  border-bottom: #777;
-  padding: 20px 60px;
+nav {
+  padding: 2rem 0;
 }
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover {
+  color: darkslateblue;
+}
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgba(19, 18, 18, 0.315);
+  text-decoration: none;
+  background-color: rgb(163, 128, 180);
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1.1rem;
+  user-select: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(5, 5, 5);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .faq-container {
   display: flex;
   justify-content: center;
@@ -29,10 +81,11 @@
   outline: none;
   transition: 0.4s;
   margin: auto;
+  transition: height 0.3s ease-in-out;
 }
+
 .faq-body {
   margin: auto;
-  /* text-align: center; */
   width: 50%;
   padding: auto;
 }
@@ -48,6 +101,10 @@
   display: none;
   overflow: hidden;
 }
+.faq-body p {
+  font-size: 1.5rem;
+}
+
 .faq-page:after {
   content: "\02795";
   /* Unicode character for "plus" sign (+) */
@@ -56,7 +113,44 @@
   float: right;
   margin-left: 5px;
 }
+
 .active1:after {
   content: "\2796";
   /* Unicode character for "minus" sign (-) */
+}
+
+@media (max-width: 1050px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger .active .bar :nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger .active .bar :nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger .active .bar :nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav__links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav__links li {
+    margin: 16px 0;
+  }
+  .nav__links.active {
+    left: 0;
+  }
+  .faq-page,
+  .faq-body {
+    width: 90%;
+  }
 }

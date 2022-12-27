@@ -13,7 +13,7 @@
     />
     <title>Organizer | Kontakt</title>
   </head>
-  <body background="cvece.jpeg">
+  <body>
     <nav>
       <ul class="nav__links">
         <li><a href="index.html" class="nav_linkss">Početna</a></li>
@@ -29,34 +29,41 @@
       </div>
     </nav>
 
-    <form></form>
-    <div class="container">
-      <object class="diamond" data="/slike/diamond-157204.svg"></object>
-      <p class="tekst">
-        Podelite s nama Vaše sugestije i komentare<br />Zajedno ćemo učiniti
-        dasvaki dan bude još lakši
-      </p>
-    </div>
+    <section>
+      <form id="form" action="/">
+        <h1>Registracija</h1>
+        <div class="input-control">
+          <label for="username">Korisničko ime</label>
+          <input id="username" name="username" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="password">Šifra</label>
+          <input id="password" name="password" type="password" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="password2">Ponovi šifru</label>
+          <input id="password2" name="password2" type="password" />
+          <div class="error"></div>
+        </div>
+        <button type="submit">Prijavi se</button>
+      </form>
 
-    <!-- <p>
-      <s style="position: fixed; left: 6%; top: 17%">
-        <img src="/slike/dijamant.png" alt="dijamant" width="50" height="50" />
-      </s>
-      Podelite s nama vaše sugestije i komentare. <br />
-      Zajedno ćemo učiniti da svaki dan bude još lakši.
-    </p> -->
-    <!-- <q>
-      <s style="position: fixed; left: 6%; top: 33%">
-        <img src="/slike/dijamant.png" alt="dijamant" width="50" height="50" />
-      </s>
-      <h1>SAVETI</h1>
-      <h2>Info linija: 08:00-16:00</h2>
-      <h3>Telefon:0800 22 33 777</h3>
-      <h4>e-mail: vasikomentari@organaizer.com</h4>
-    </q>
-    <s1 style="position: fixed; bottom: 10px; left: 25%">
-      <img src="/slike/logo.jpeg" alt="logo" width="800px" height="100px" />
-    </s1> -->
-    <script src="/script/kontakt.js"></script>
+      <div class="container">
+        <object class="diamond" data="/img/diamond-157204.svg"></object>
+        <p class="tekst">
+          Podelite s nama Vaše sugestije i komentare<br />Zajedno ćemo učiniti
+          dasvaki dan bude još lakši
+        </p>
+      </div>
+    </section>
+
+    <script src="/js/kontakt.js"></script>
   </body>
 </html>
